@@ -119,9 +119,17 @@ greet("Bob", "Tuesday")
 
 Good overview [here](https://stackoverflow.com/a/49350382)
 
+### Default parameter values
+
+```swift
+func foo(a:Int = 5) {
+
+}
+```
+
 ### Returning multiple values
 
-You can use a tuple to return multimate values from a function:
+You can use a tuple to return multiple values from a function:
 
 ```swift
 func foo() -> (a:Int, b:Int, c:Int) {
@@ -135,6 +143,7 @@ print(out.1)
 
 ### Passing a function as an argument
 
+```swift
 func callFunction(comparer : f:(Int) -> Bool) -> {
   return comparer(5)
 }
@@ -144,6 +153,17 @@ func compare(number:Int) -> Bool {
 }
 
 var value = callFunction(comparer:compare)
+```
+
+### Passing a function as an optional arguments
+
+```swift
+func foo(callback:((String) -> Void)? = nil) {
+  if(callback != nil) {
+    callback!("bar")
+  }
+}
+```
 
 ### Defining a Closures
 
