@@ -11,7 +11,8 @@ Notes, tips and tricks when doing development on Apple platforms
 Variables can have optional values. These are noted by the use of '?'
 
 ```swift
-var optional:String? = "Hello"```
+var optional:String? = "Hello"
+```
 
 This means that the variable can potentially be nil.
 
