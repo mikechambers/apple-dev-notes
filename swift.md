@@ -1,10 +1,8 @@
 # Swift
 
-## Swift
+## Variables
 
-### Variables
-
-#### Optional values
+### Optional values
 
 Variables can have optional values. These are noted by the use of '?'
 
@@ -25,7 +23,7 @@ if let name = optional {
 
 If optional has a value the statement will return true and the block will be executed. If its nil, it will return false, and the block will not be executed.
 
-#### Default values
+### Default values
 
 You can use '??' to provide a default value when using a variable with an optional value.
 
@@ -41,9 +39,9 @@ When working with optional values, you can write a '?' before the operation. If 
 
 let len = nickName?.length
 
-### Control Flows
+## Control Flows
 
-#### switch statements
+### switch statements
 
 ```swift
 let foo = "bar"
@@ -62,7 +60,7 @@ Note that statements do not fall through, and thus you do not need break stateme
 
 cases support any kind of data, and can include comparison operators.
 
-#### for-in iterating dictionaries
+### for-in iterating dictionaries
 
 ```swift
 let values = [
@@ -76,7 +74,7 @@ for (key, value) in values {
 }
 ```
 
-#### Looping with an index
+### Looping with an index
 
 ```swift
 var total = 0
@@ -87,9 +85,9 @@ for (i in 0..<4) {
 
 Note, '..<' omits upper value. '...' includes upper value.
 
-### Functions and Closures
+## Functions and Closures
 
-#### Defining a Function
+### Defining a Function
 
 ```swift
 func greet(person:String day:String) -> {
@@ -121,7 +119,7 @@ greet("Bob", "Tuesday")
 
 Good overview [here](https://stackoverflow.com/a/49350382)
 
-#### Returning multiple values
+### Returning multiple values
 
 You can use a tuple to return multimate values from a function:
 
@@ -135,7 +133,7 @@ print(out.a)
 print(out.1)
 ```
 
-#### Passing a function as an argument
+### Passing a function as an argument
 
 func callFunction(comparer : f:(Int) -> Bool) -> {
   return comparer(5)
@@ -147,7 +145,7 @@ func compare(number:Int) -> Bool {
 
 var value = callFunction(comparer:compare)
 
-#### Defining a Closures
+### Defining a Closures
 
 You can define a closure by wrapping the code in '{}'
 
@@ -169,7 +167,7 @@ let sortedNumbers = numbers.sorted ({ $0 > $1})
 
 Note, function arguments can also be referenced by their argument position index (as above).
 
-### Classes
+## Classes
 
 Creating a custom class:
 
@@ -202,7 +200,7 @@ class NamedShaped : Shape {
 
 Note, classes are always passed by references. structs are copied.
 
-#### Errors
+### Errors
 
 ```swift
 do {
